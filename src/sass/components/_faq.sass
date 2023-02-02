@@ -1,0 +1,62 @@
+.faq
+	&__section
+		padding-top: 9.2rem
+
+		@include tablet
+			padding-top: 7.2rem
+
+	&__wrapper
+		padding-bottom: 5rem
+		display: flex
+		align-items: stretch
+
+		@include tablet
+			display: block
+
+	&__title
+		padding-right: 10rem
+		letter-spacing: -0.07em
+
+		@include tablet
+			padding: 2.25rem 0
+
+	&__questions
+		flex: 1 1 auto
+		min-height: 420px
+
+		@include tablet
+			min-height: 360px
+
+.question
+	&__wrapper
+		padding: 3rem 0
+		border-top: 1px solid rgba($color-white, 0.2)
+
+		&:last-child
+			border-bottom: 1px solid rgba($color-white, 0.2)
+
+		@include tablet
+			padding: 2rem 0
+
+	&__answer
+		display: block
+		max-height: 0
+		padding-top: 0
+		opacity: 0
+		font-weight: 400
+		overflow: hidden
+		transition: all .3s ease-in-out
+
+	&__subtitle
+		font-size: 2.4rem
+		font-weight: 400
+		line-height: 1.5
+		cursor: pointer
+
+	&__subtitle.is-active + &__answer
+		max-height: 100vh
+		padding-top: 3rem
+		opacity: 1
+
+
+

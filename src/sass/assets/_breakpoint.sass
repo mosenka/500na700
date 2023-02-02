@@ -1,0 +1,48 @@
+@mixin desktop-xl
+	// change the values for the situation
+	@media (min-width: ($desktop-xl * 1px))
+		@content
+
+
+
+@mixin desktop
+	//@media (min-width: ($desktop * 1px)) and (max-width: (($desktop-xl - 1) * 1px))
+	@media (max-width: ($desktop-xl * 1px))
+		@content
+
+
+@mixin laptop
+	// change the values for the situation
+	//@media (min-width: ($laptop * 1px)) and (max-width: (($desktop - 1) * 1px))
+	@media (max-width: (($desktop - 1) * 1px))
+		@content
+
+
+@mixin laptop-h
+	@media (min-width: ($desktop * 1px)) and (max-height: (($desktop-vh - 1) * 1px))
+		@content
+
+
+
+@mixin tablet
+	//@media (max-width: ($tablet * 1px)) and (max-width: (($laptop - 1) * 1px))
+	@media (max-width: (($laptop - 1) * 1px))
+		@content
+
+
+
+@mixin mobile
+	@media (max-width: (($mobile-hr - 1) * 1px))
+		@content
+
+
+@mixin mobile-hr
+	@media (max-width: (($tablet - 1) * 1px))
+		@content
+
+
+@mixin devices
+	@media (max-width: (($desktop - 1) * 1px))
+		@content
+
+

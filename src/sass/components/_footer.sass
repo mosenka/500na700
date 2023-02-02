@@ -1,0 +1,54 @@
+.footer
+	padding: 5rem 0 8rem
+	width: 100%
+	background: $color-baltic-sea
+
+	&__desc
+		flex: 0 1 400px
+
+	&__wrapper
+		align-items: flex-start
+
+		@include mobile-hr
+			display: block
+
+	&__text
+		font-size: 1.4rem
+		padding: 1rem 0 2.5rem
+		font-weight: 400
+
+	&__link
+		text-decoration: underline
+		font-weight: 400
+		transition: color .3s
+
+		&:not([disabled]):hover
+			color: $color-accent
+
+.share
+	&__wrapper
+		padding: 0.4rem 1.9rem
+		margin-left: 10rem
+
+		@include mobile-hr
+			margin: 0
+			padding: 4rem 0 0
+
+		@include mobile
+			justify-content: center
+
+
+	&__icon-wrapper
+		width: 28px
+		height: 28px
+		transition: color .3s
+
+		&:not(:last-child)
+			margin-right: 3rem
+
+		&:not([disabled]):hover
+			color: $color-accent
+
+
+
+
